@@ -48,7 +48,11 @@ def update_player(request, pk):
         form = PlayerForm(request.POST, request.FILES, instance=player)
         if form.is_valid():
             form.save()
-            return redirect('players:players-home')
+            messages.success(request, 'Player updated successfully!!')
+            return render(request, 'players/player_detail.html', {'player': player, 'form': form})
+            # return redirect('players:players-home')
+        else:
+            messages.error(request, 'Error submitting contact request.')
     else:
         form = PlayerForm(instance=player)
     return render(request, 'players/player_detail.html', {'player': player, 'form': form})
