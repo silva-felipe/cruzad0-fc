@@ -6,3 +6,5 @@ __pycache__/
 *.pyi
 *.egg-info/
 media/
+players/__pycache__
+players/migrations/__pycache__
