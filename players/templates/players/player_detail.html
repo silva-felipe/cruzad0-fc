@@ -9,10 +9,12 @@
             <div class="card">
                 <div class="card-body">
                     <img src="{{ player.photo.url }}" alt="Player Photo" class="rounded mb-3" width="100%">
+                    {% include 'players/messages.html' %}
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit" class="btn btn-primary">Save</button>
+                        <a href="{{ '/players/' }}" class="btn btn-secondary float-right">Back</a>
                     </form>
                 </div>
             </div>
