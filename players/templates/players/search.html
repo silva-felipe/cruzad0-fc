@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Players{% endblock %}
+
+{% block content %}
+    <h1>Players</h1>
+    <hr>
+
+    <div class="row">
+        {% for player in players %}
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ player.photo.url }}" alt="Player Photo" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ player.name }}</h5>
+                                <p class="card-text"><b>Nickname:</b> {{ player.nickname }}</p>
+                                <p class="card-text"><b>Position:</b> {{ player.position }}</p>
+                                <a href="{{ player.get_absolute_url }}" class="btn btn-primary float-right">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="w-100"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Positions{% endblock %}
+
+{% block content %}
+    <h1>Positions</h1>
+    <ul>
+        {% for position in positions %}
+            <li>{{ position.position_name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
