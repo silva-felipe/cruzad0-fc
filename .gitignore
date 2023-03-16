@@ -8,3 +8,6 @@ __pycache__/
 media/
 players/__pycache__
 players/migrations/__pycache__
+positions/__pycache__
+positions/migrations/__pycache__
+

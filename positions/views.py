@@ -5,4 +5,5 @@ from .models import Position
 
 def home_view(request):
     positions = Position.objects.all()
+    print(positions)
     return render(request, 'positions/main.html', {'positions': positions})

@@ -1,12 +1,59 @@
 {% extends "base.html" %}
 
-{% block title %}Positions{% endblock %}
+{% block title %}Game Field{% endblock %}
 
 {% block content %}
-    <h1>Positions</h1>
-    <ul>
-        {% for position in positions %}
-            <li>{{ position.position_name }}</li>
-        {% endfor %}
-    </ul>
+<h1 class="text-center">Campo</h1>
+<div class="container-fluid p-0">
+  <div class="game-field">
+    <div class="row no-gutters justify-content-center align-items-center h-100">
+      <div class="col-md-8">
+        <div class="card-deck">
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">GK</h5>
+              <p class="card-text">{{ positions.0 }}</p>
+            </div>
+          </div>
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">RB</h5>
+              <p class="card-text">{{ positions.1 }}</p>
+            </div>
+          </div>
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">LB</h5>
+              <p class="card-text">{{ positions.2 }}</p>
+            </div>
+          </div>
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">CB</h5>
+              <p class="card-text">{{ positions.3 }}</p>
+            </div>
+          </div>
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">CDM</h5>
+              <p class="card-text">{{ positions.4 }}</p>
+            </div>
+          </div>
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">CAM</h5>
+              <p class="card-text">{{ positions.5 }}</p>
+            </div>
+          </div>
+          <div class="card position-card">
+            <div class="card-body">
+              <h5 class="card-title">CF</h5>
+              <p class="card-text">{{ positions.6 }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,0 +1,42 @@
+.game-field {
+  height: 50vh;
+  width: 50vw;
+  background-image: url("/media/teams/soccer-field.png");
+  background-size: cover;
+  rotate: 90deg;
+
+  margin: auto;
+  margin-top: 140px;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.goalkeeper {
+  position: absolute;
+  top: 20px;
+  left: 200px;
+}
+
+.defender {
+  position: absolute;
+  top: 120px;
+  left: 50px;
+}
+
+.midfielder {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.forward {
+  position: absolute;
+  top: 120px;
+  left: 400px;
+}
+
+.position-card {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
